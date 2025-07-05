@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>CS Ketan Vyas</title>
 
   <!--
     - favicon
@@ -47,7 +47,10 @@
 
         <div class="info-content">
           <h1 class="name" title="Ketan Vyas">Ketan Vyas</h1>
-          <p class="title">Company Secretary</p>
+          <div class="sidebar-btn">
+            <button class="title">Company Secretary</button>
+            <button class="title" id="btn-apointment"> Book an Apointment</button>
+          </div>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -147,7 +150,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link>Profile</button>
           </li>
 
           <li class="navbar-item">
@@ -494,10 +497,10 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <article class="profile" data-page="profile">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title">Profile</h2>
         </header>
 
         <!-- Education Section -->
@@ -878,17 +881,6 @@
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
-        <!-- Google Map Section -->
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.2484568465287!2d75.9090058!3d22.7534057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39631d70c3b7dc65%3A0xa8a8d20f65164ce4!2sWorkdesq%20Coworking!5e0!3m2!1sen!2sin!4v1719214870444!5m2!1sen!2sin"
-              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </figure>
-        </section>
-
         <!-- Contact Form Section -->
         <section class="contact-form">
 
@@ -915,10 +907,24 @@
 
         </section>
 
+
+        <!-- Google Map Section -->
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.2484568465287!2d75.9090058!3d22.7534057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39631d70c3b7dc65%3A0xa8a8d20f65164ce4!2sWorkdesq%20Coworking!5e0!3m2!1sen!2sin!4v1719214870444!5m2!1sen!2sin"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </figure>
+        </section>
+
       </article>
 
 
     </div>
+
+    
 
   </main>
 
