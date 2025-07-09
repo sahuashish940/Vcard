@@ -1421,8 +1421,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .about .article-title { margin-bottom: 20px; }
 
-  .about-text { margin-bottom: 40px; }
-
   /* service */
 
   .service-item {
@@ -1439,6 +1437,30 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .service-content-box { text-align: left; }
+
+  .about .article-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.about-text {
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #222;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-text .highlight {
+  font-weight: 700;
+  color: #083B82; /* or a custom highlight color */
+}
+
 
   /* testimonials */
 
