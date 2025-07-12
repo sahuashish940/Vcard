@@ -1461,6 +1461,31 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: #083B82; /* or a custom highlight color */
 }
 
+.about-flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-image-box {
+  flex: 0 0 250px;
+}
+
+.about-profile-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.about-description {
+  flex: 1;
+  min-width: 280px;
+}
+
 
   /* testimonials */
 
@@ -1936,4 +1961,102 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+@media (max-width: 767px) {
+  .about-flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .about-image-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-profile-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .about-description {
+    width: 100%;
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  .about-description p {
+    font-size: 14px;
+  }
+}
+
+.about-image-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-map iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.large-image img {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.small-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.small-images img {
+  flex: 1 1 calc(50% - 10px); /* two per row on mobile */
+  max-width: calc(50% - 10px);
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.small-images img:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .small-images img {
+    flex: 1 1 calc(25% - 10px); /* four in one row on tablets/desktops */
+    max-width: calc(25% - 10px);
+  }
+}
+
+
+.office-visit-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.office-visit-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #083B82;
+}
+
+.office-visit-section p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 98%;
 }
