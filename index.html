@@ -152,31 +152,35 @@
       -->
 
       <nav class="navbar">
-
         <ul class="navbar-list">
-
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link data-target="about">
+              <ion-icon name="person-outline"></ion-icon>
+              <span>About</span>
+            </button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Profile</button>
+            <button class="navbar-link" data-nav-link data-target="profile">
+              <ion-icon name="briefcase-outline"></ion-icon>
+              <span>Profile</span>
+            </button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Catalog</button>
+            <button class="navbar-link" data-nav-link data-target="catalog">
+              <ion-icon name="grid-outline"></ion-icon>
+              <span>Catalog</span>
+            </button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link data-target="contact">
+              <ion-icon name="call-outline"></ion-icon>
+              <span>Contact</span>
+            </button>
           </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
         </ul>
-
       </nav>
 
 
@@ -441,8 +445,18 @@
                   Qualified as Associate Member of the Institute of Company Secretaries of India (ICSI).
                 </p>
               </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Maharshi Dayanand Sarasvati University, Jaipur</h4>
+                <span>Bachelors of Laws (LL.B.) – June 2014 to June 2017</span>
+                <p class="timeline-text">
+                  Successfully completed the Bachelor of Laws (LL.B.) program with a focus on corporate and legal
+                  studies.
+                </p>
+              </li>
             </ol>
           </section>
+
 
           <!-- Experience Section (Reverse Chronological) -->
           <section class="timeline">
@@ -797,8 +811,7 @@
       <!--
         - #BLOG
       -->
-
-      <article class="blog" data-page="blog">
+      <!-- <article class="blog" data-page="blog">
 
         <header>
           <h2 class="h2 article-title">Blog</h2>
@@ -810,20 +823,11 @@
 
             <li class="blog-post-item">
               <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img
-                    src="https://static.vecteezy.com/system/resources/previews/008/218/106/non_2x/gst-written-words-on-paper-notebook-workplace-business-concept-photo.jpg"
-                    alt="Understanding Company Law Compliance in India" loading="lazy">
-                </figure>
-
                 <div class="blog-content">
 
                   <div class="blog-meta">
                     <p class="blog-category">Company Law</p>
-
                     <span class="dot"></span>
-
                     <time datetime="2025-06-24">June 24, 2025</time>
                   </div>
 
@@ -835,7 +839,6 @@
                   </p>
 
                 </div>
-
               </a>
             </li>
 
@@ -843,11 +846,7 @@
 
         </section>
 
-      </article>
-
-
-
-
+      </article> -->
 
 
       <!--
@@ -908,6 +907,90 @@
 
 
   </main>
+
+  <!-- Modern Internship Popup -->
+  <div id="internship-popup" class="popup modern-popup">
+    <div class="popup-content-modern">
+      <span class="popup-close" onclick="closePopup()">&times;</span>
+
+      <!-- Internship Content -->
+      <div id="internship-content">
+        <h2 class="popup-title">Enhance Your Skills – Get Certified & Career-Ready!</h2>
+        <p class="popup-intro">
+          Unlock your professional potential with our <strong>expert-led training programs</strong> designed to give
+          <strong>practical knowledge</strong> and <strong>hands-on experience</strong>. Whether you're a fresher or a
+          working professional, our structured modules ensure you gain <strong>industry-relevant skills</strong>.
+        </p>
+        <h3 class="popup-subtitle">Key Highlights</h3>
+        <ul class="popup-list">
+          <li><strong>Comprehensive Training:</strong> Real-world applications of core concepts.</li>
+          <li><strong>Expert Mentors:</strong> Learn from experienced professionals.</li>
+          <li><strong>Flexible Learning:</strong> Online/offline sessions with practical exercises.</li>
+          <li><strong>Certification:</strong> Get an industry-recognized certificate to boost your resume.</li>
+        </ul>
+        <h3 class="popup-subtitle">4-Day Intensive Program</h3>
+        <ol class="popup-list">
+          <li><strong>Day 1:</strong> Private Limited Incorporation & Compliances</li>
+          <li><strong>Day 2:</strong> LLP Formation and Compliances</li>
+          <li><strong>Day 3:</strong> Trademark Registration & Reply Filing</li>
+          <li><strong>Day 4:</strong> Digital Signature Creation & GST Registration</li>
+        </ol>
+        <p class="popup-fee"><strong>Course Fee:</strong> ₹10,000/- (All-inclusive)</p>
+        <p class="popup-cta">Take the first step towards a better career. <strong>Enroll now and get certified!</strong>
+        </p>
+        <button class="popup-btn" onclick="showEnrollForm()">Enroll Now</button>
+      </div>
+
+      <!-- Enroll Form -->
+      <div id="enroll-form" class="hidden enroll-form">
+        <h3 class="form-title">Enroll for Internship Program</h3>
+        <p class="form-subtitle">Please fill in your details below to register.</p>
+
+        <form id="enrollForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="^[6-9]\d{9}$"
+              title="Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9." required>
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Why do you want this internship?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your answer..." required></textarea>
+          </div>
+          <div class="form-actions">
+            <input type="submit" class="popup-btn" value="Submit">
+          </div>
+        </form>
+      </div>
+
+
+      <!-- Success Message -->
+      <div id="success-message" class="hidden success-message">
+        <h3 class="form-title">Thank You for Registering!</h3>
+        <p class="form-subtitle">
+          We have received your details. Our team will connect with you as soon as possible.
+        </p>
+        <button class="popup-btn" onclick="closePopup()">Close</button>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init('r3LHR_J4o7jYP8m7G'); // Replace with your own EmailJS Public Key
+  </script>
+
 
   <!--
     - custom js link

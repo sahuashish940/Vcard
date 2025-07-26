@@ -143,17 +143,59 @@ const pages = document.querySelectorAll("[data-page]");
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
+    const targetPage = this.getAttribute("data-target");
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
+    for (let j = 0; j < pages.length; j++) {
+      if (pages[j].dataset.page === targetPage) {
+        pages[j].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        pages[j].classList.remove("active");
+        navigationLinks[j].classList.remove("active");
       }
     }
-
   });
 }
+
+
+// Show Internship Popup after 5 seconds
+window.onload = function() {
+  setTimeout(() => {
+    document.getElementById("internship-popup").style.display = "flex";
+  }, 2000);
+};
+
+function closePopup() {
+  document.getElementById("internship-popup").style.display = "none";
+}
+
+
+function showEnrollForm() {
+  document.getElementById("internship-content").classList.add("hidden");
+  document.getElementById("enroll-form").classList.remove("hidden");
+}
+
+document.getElementById('enrollForm').addEventListener('submit', function(event) {
+  event.preventDefault(); 
+
+  const submitBtn = event.target.querySelector('.popup-btn');
+  submitBtn.value = "Submitting...";
+
+  // Use EmailJS to send form data
+  emailjs.sendForm('service_pa4wt3u', 'template_3gpx8gi', '#enrollForm')
+    .then(function() {
+      // Hide form and internship content
+      document.getElementById('enroll-form').classList.add('hidden');
+      document.getElementById('internship-content').classList.add('hidden');
+
+      // Show success message
+      document.getElementById('success-message').classList.remove('hidden');
+
+    }, function(error) {
+      alert('Failed to send! Please try again.');
+      console.error('Error:', error);
+      submitBtn.value = "Submit";
+    });
+});
+
