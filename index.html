@@ -167,12 +167,21 @@
             </button>
           </li>
 
+          <!-- NEW COURSES NAVIGATION ITEM -->
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link data-target="courses">
+              <ion-icon name="school-outline"></ion-icon>
+              <span>Courses</span>
+            </button>
+          </li>
+
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link data-target="catalog">
               <ion-icon name="grid-outline"></ion-icon>
               <span>Catalog</span>
             </button>
           </li>
+
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link data-target="contact">
@@ -183,7 +192,7 @@
         </ul>
       </nav>
 
-
+      
 
 
 
@@ -447,8 +456,8 @@
               </li>
 
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Maharshi Dayanand Sarasvati University, Jaipur</h4>
-                <span>Bachelors of Laws (LL.B.) – June 2014 to June 2017</span>
+                <h4 class="h4 timeline-item-title">Bachelors of Laws (LL.B.) – MDSU, Ajmer</h4>
+                <span>June 2014 to June 2017</span>
                 <p class="timeline-text">
                   Successfully completed the Bachelor of Laws (LL.B.) program with a focus on corporate and legal
                   studies.
@@ -562,6 +571,144 @@
             </ul>
           </section>
 
+      </article>
+
+      <article class="courses" data-page="courses">
+        <header>
+          <h2 class="article-title" style="color: #083B82;">Our Courses</h2>
+        </header>
+
+        <section class="course-section">
+          <ul class="course-list">
+
+            <!-- Course 1 -->
+            <li class="course-item">
+              <div class="course-wrapper">
+                <div>
+                  <div class="course-icon">4D</div>
+                  <h3 class="course-title">Four Days Secretarial Class</h3>
+                  <p class="course-duration">Duration: 4 Days</p>
+                  <p class="course-description">
+                    Comprehensive training on company law compliances, board meetings, and secretarial practices.
+                  </p>
+                  <ul class="course-features">
+                    <li>Company Law Basics</li>
+                    <li>Board Meeting Procedures</li>
+                    <li>Statutory Compliances</li>
+                    <li>Practical Case Studies</li>
+                  </ul>
+                </div>
+                <button class="course-btn" onclick="enrollCourse('Four Days Secretarial')">Enroll Now</button>
+              </div>
+            </li>
+
+            <!-- Course 2 -->
+            <li class="course-item">
+              <div class="course-wrapper">
+                <div>
+                  <div class="course-icon">2D</div>
+                  <h3 class="course-title">Two Days PF ESI Class</h3>
+                  <p class="course-duration">Duration: 2 Days</p>
+                  <p class="course-description">
+                    Master Provident Fund and Employee State Insurance compliances and procedures.
+                  </p>
+                  <ul class="course-features">
+                    <li>PF Registration Process</li>
+                    <li>ESI Compliance</li>
+                    <li>Monthly Returns Filing</li>
+                    <li>Employee Benefits</li>
+                  </ul>
+                </div>
+                <button class="course-btn" onclick="enrollCourse('Two Days PF ESI')">Enroll Now</button>
+              </div>
+            </li>
+
+            <!-- Course 3 -->
+            <li class="course-item">
+              <div class="course-wrapper">
+                <div>
+                  <div class="course-icon">1D</div>
+                  <h3 class="course-title">One Day LinkedIn Class</h3>
+                  <p class="course-duration">Duration: 1 Day</p>
+                  <p class="course-description">
+                    Build your professional network and optimize your LinkedIn profile for career growth.
+                  </p>
+                  <ul class="course-features">
+                    <li>Profile Optimization</li>
+                    <li>Networking Strategies</li>
+                    <li>Content Creation</li>
+                    <li>Professional Branding</li>
+                  </ul>
+                </div>
+                <button class="course-btn" onclick="enrollCourse('One Day LinkedIn')">Enroll Now</button>
+              </div>
+            </li>
+
+            <!-- Course 4 -->
+            <li class="course-item">
+              <div class="course-wrapper">
+                <div>
+                  <div class="course-icon">TM</div>
+                  <h3 class="course-title">Two Days Trademark Class</h3>
+                  <p class="course-duration">Duration: 2 Days</p>
+                  <p class="course-description">
+                    Learn trademark registration, filing procedures, and intellectual property protection.
+                  </p>
+                  <ul class="course-features">
+                    <li>Trademark Search</li>
+                    <li>Application Filing</li>
+                    <li>Opposition Handling</li>
+                    <li>Brand Protection</li>
+                  </ul>
+                </div>
+                <button class="course-btn" onclick="enrollCourse('Two Days Trademark')">Enroll Now</button>
+              </div>
+            </li>
+
+            <!-- Course 5 -->
+            <li class="course-item">
+              <div class="course-wrapper">
+                <div>
+                  <div class="course-icon">IT</div>
+                  <h3 class="course-title">One Day Income Tax Class</h3>
+                  <p class="course-duration">Duration: 1 Day</p>
+                  <p class="course-description">
+                    Understand income tax basics, filing procedures, and tax planning strategies.
+                  </p>
+                  <ul class="course-features">
+                    <li>Tax Calculation</li>
+                    <li>Return Filing</li>
+                    <li>Deductions & Exemptions</li>
+                    <li>Tax Planning</li>
+                  </ul>
+                </div>
+                <button class="course-btn" onclick="enrollCourse('One Day Income Tax')">Enroll Now</button>
+              </div>
+            </li>
+
+            <!-- Course 6 -->
+            <li class="course-item">
+              <div class="course-wrapper">
+                <div>
+                  <div class="course-icon">TD</div>
+                  <h3 class="course-title">Two Days TDS/TCS Class</h3>
+                  <p class="course-duration">Duration: 2 Days</p>
+                  <p class="course-description">
+                    Master Tax Deducted at Source and Tax Collected at Source compliances and procedures.
+                  </p>
+                  <ul class="course-features">
+                    <li>TDS Provisions</li>
+                    <li>TCS Compliance</li>
+                    <li>Quarterly Returns</li>
+                    <li>Certificate Issuance</li>
+                  </ul>
+                </div>
+                <button class="course-btn" onclick="enrollCourse('Two Days TDS/TCS')">Enroll Now</button>
+              </div>
+            </li>
+
+          </ul>
+        </section>
       </article>
 
 
@@ -1015,4 +1162,40 @@
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   }
+</script>
+
+<script>
+  function enrollCourse(courseName) {
+    // You can integrate this with your existing WhatsApp or contact system
+    const phoneNumber = "919039366005";
+    const message = `Hi, I would like to enroll for the "${courseName}". Please provide more details.`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+
+  // Add smooth animations on scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  // Observe course items for animations
+  document.addEventListener('DOMContentLoaded', () => {
+    const courseItems = document.querySelectorAll('.course-item');
+    courseItems.forEach((item, index) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(30px)';
+      item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+      observer.observe(item);
+    });
+  });
 </script>
