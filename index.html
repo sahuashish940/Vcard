@@ -35,7 +35,7 @@
 
     gtag('config', 'G-XPJTJKS95N');
   </script>
-  
+
   <!-- Google Site Verification for Google Search Console -->
   <meta name="google-site-verification" content="4cR1XXjVZpxLz77xtjoUaMPykXvOH3F7zmLzWdK9Xb8" />
 
@@ -58,22 +58,27 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Ketan Vyas" width="80">
+          <img src="./assets/images/my-avatar.png" alt="Ketan Vyas" width="110">
         </figure>
 
         <div class="info-content">
           <h1 class="name" title="Ketan Vyas" style="color: #083B82;">Ketan Vyas</h1>
           <div class="sidebar-btn">
-            <button class="title">Company Secretary (F 12064)</button>
-            <button class="title2" id="btn-apointment" onclick="openWhatsApp()">
-              Consult Now &nbsp;
-              <i class="fa fa-whatsapp" style="font-size:26px;color:green"></i>
-            </button>
+            <div class="sidebar-btn">
+              <button class="title">Company Secretary (F 12064)</button>
+              <button class="title" onclick="window.open('Statutory body under an Act of Parliament.pdf')">
+                ICSI PRNO : 6867/2025
+              </button>
+              <button class="title2" id="btn-apointment" onclick="openWhatsApp()">
+                Consult Now &nbsp;
+                <i class="fa fa-whatsapp" style="font-size:26px;color:green"></i>
+              </button>
+            </div>
+
           </div>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
 
@@ -1117,10 +1122,21 @@
 
 
     </div>
-
-
-
+    
+    
   </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text">
+        &copy; 2025 <strong>Ketan Vyas &amp; Co.</strong> — All Rights Reserved.
+      </p>
+      <ul class="footer-links">
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="https://g.co/kgs/SdJZcvy" target="_blank">Reviews</a></li>
+      </ul>
+    </div>
+  </footer>
 
   <!-- Modern Internship Popup -->
   <div id="internship-popup" class="popup modern-popup">
@@ -1200,6 +1216,9 @@
   </div>
 
 
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     emailjs.init('r3LHR_J4o7jYP8m7G'); // Replace with your own EmailJS Public Key
@@ -1269,18 +1288,6 @@
 </script>
 
 <script>
-  // Toggle search input animation
-  document.getElementById("searchToggle").addEventListener("click", function () {
-    const input = document.getElementById("serviceSearch");
-    input.classList.toggle("open");
-    if (input.classList.contains("open")) {
-      input.focus();
-    } else {
-      input.value = "";
-      document.querySelectorAll(".project-item").forEach(item => item.style.display = "block");
-    }
-  });
-
   // Live search filter
   document.getElementById("serviceSearch").addEventListener("keyup", function () {
     const searchTerm = this.value.toLowerCase();

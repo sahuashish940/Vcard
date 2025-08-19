@@ -281,7 +281,6 @@ article.active {
 
 main {
   margin: 15px 12px;
-  margin-bottom: 75px;
   min-width: 259px;
 }
 
@@ -295,7 +294,7 @@ main {
 
 .sidebar{
   margin-bottom: 15px;
-  max-height: 170px;
+  max-height: 220px;
   overflow: hidden;
   transition: var(--transition-2);
   background-color: #FFFFFF;
@@ -447,27 +446,23 @@ main {
   gap: 10px;
   align-items: center;
 }
-.sidebar-btn .title,
-.sidebar-btn .title2 {
-  font-size: 0.85rem;
-  font-weight: 500;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  background-color: #f1f1f1;
-  color: #083B82;
-}
-.sidebar-btn .title2 {
-  background-color: #e8f5e9;
-  color: #25D366;
-  border: 1px solid #25D366;
-}
-
-.sidebar-btn .title2:hover {
-  background-color: #d4f4da;
-}
+  .sidebar-btn .title,
+  .sidebar-btn .title2 {
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: #f1f1f1;
+    color: #083B82;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 
 
 .gmb-box {
@@ -558,7 +553,6 @@ main {
     .main-content {
       max-width: 1200px;
       margin: 0 auto;
-      padding-bottom: 120px;
     }
 
     .section {
@@ -2875,4 +2869,96 @@ button {
   border-color: #4f46e5;
   outline: none;
   box-shadow: 0px 0px 5px rgba(79, 70, 229, 0.5);
+}
+
+
+
+/* ----------------------------------- *
+   FOOTER
+* ----------------------------------- */
+
+.footer {
+  background: var(--onyx);
+  color: var(--white-1);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
+  padding: 16px;
+  margin: 16px 12px 24px;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: var(--fs-7);
+  line-height: 1.35;
+  color: var(--white-1);
+}
+
+.footer-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: var(--fs-7);
+  color: var(--white-1);
+  opacity: 0.9;
+  transition: opacity var(--transition-1), transform var(--transition-1);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  opacity: 1;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Light variant if you ever need it on white backgrounds */
+.footer--light {
+  background: #FFFFFF;
+  color: #2b2b2b;
+  border: 1px solid var(--jet);
+}
+.footer--light .footer-links a { color: #2b2b2b; }
+
+/* Sticky option: add class "footer--sticky" to .footer in HTML */
+.footer--sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 8px;           /* small breathing space above device edges */
+  z-index: 100;
+  margin: 0 12px;        /* matches main margins */
+}
+@media (max-width: 768px) {
+  .footer--sticky { bottom: 6px; }
+}
+
+/* Ensure content isn't hidden behind sticky footer */
+body.has-sticky-footer {
+  padding-bottom: 88px; /* ~footer height + spacing; adjust if needed */
+}
+
+/* Narrow screens */
+@media (max-width: 768px) {
+  .footer {
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 100px;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-links { gap: 10px; }
 }
