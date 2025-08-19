@@ -2523,9 +2523,6 @@ p {
   margin-bottom: 1rem;
 }
 
-ul {
-  padding-left: 1.2rem;
-}
 
 li {
   font-size: 0.95rem;
@@ -2713,4 +2710,169 @@ button {
   .course-list {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+
+/* Portfolio Popup */
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.popup.hidden { display: none; }
+
+.popup-content {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 14px;
+  width: 95%;
+  max-width: 420px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  animation: scaleUp 0.3s ease;
+  position: relative;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Header + Close button */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.popup-header h2 {
+  font-size: 18px;
+  margin: 0;
+  color: #083B82;
+}
+.popup-close {
+  font-size: 22px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #666;
+  transition: color 0.2s;
+}
+.popup-close:hover { color: #000; }
+
+/* Form styling */
+#portfolioForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #083B82;
+}
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #083B82;
+}
+
+/* Submit button with loader */
+.popup-btn {
+  background: #083B82;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.3s;
+  position: relative;
+}
+.popup-btn:hover { background: #062a5c; }
+
+/* Loader (hidden by default) */
+.popup-btn.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+.popup-btn .spinner {
+  display: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup-btn.loading span { visibility: hidden; }
+.popup-btn.loading .spinner { display: block; }
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Success / error message inside popup */
+.success-message, .error-message {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+.success-message strong { color: green; }
+.error-message strong { color: red; }
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+  .popup-content { padding: 20px 15px; }
+  .popup-header h2 { font-size: 16px; }
+  .form-group label { font-size: 13px; }
+  .form-group input, .form-group textarea { font-size: 13px; }
+}
+
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 220px;       /* fixed width */
+  opacity: 1;         /* always visible */
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(79, 70, 229, 0.5);
 }
