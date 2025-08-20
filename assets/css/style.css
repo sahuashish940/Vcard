@@ -281,7 +281,6 @@ article.active {
 
 main {
   margin: 15px 12px;
-  margin-bottom: 75px;
   min-width: 259px;
 }
 
@@ -295,7 +294,7 @@ main {
 
 .sidebar{
   margin-bottom: 15px;
-  max-height: 170px;
+  max-height: 220px;
   overflow: hidden;
   transition: var(--transition-2);
   background-color: #FFFFFF;
@@ -447,27 +446,23 @@ main {
   gap: 10px;
   align-items: center;
 }
-.sidebar-btn .title,
-.sidebar-btn .title2 {
-  font-size: 0.85rem;
-  font-weight: 500;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  background-color: #f1f1f1;
-  color: #083B82;
-}
-.sidebar-btn .title2 {
-  background-color: #e8f5e9;
-  color: #25D366;
-  border: 1px solid #25D366;
-}
-
-.sidebar-btn .title2:hover {
-  background-color: #d4f4da;
-}
+  .sidebar-btn .title,
+  .sidebar-btn .title2 {
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: #f1f1f1;
+    color: #083B82;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 
 
 .gmb-box {
@@ -558,7 +553,6 @@ main {
     .main-content {
       max-width: 1200px;
       margin: 0 auto;
-      padding-bottom: 120px;
     }
 
     .section {
@@ -2523,9 +2517,6 @@ p {
   margin-bottom: 1rem;
 }
 
-ul {
-  padding-left: 1.2rem;
-}
 
 li {
   font-size: 0.95rem;
@@ -2713,4 +2704,261 @@ button {
   .course-list {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+
+/* Portfolio Popup */
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.popup.hidden { display: none; }
+
+.popup-content {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 14px;
+  width: 95%;
+  max-width: 420px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  animation: scaleUp 0.3s ease;
+  position: relative;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Header + Close button */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.popup-header h2 {
+  font-size: 18px;
+  margin: 0;
+  color: #083B82;
+}
+.popup-close {
+  font-size: 22px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #666;
+  transition: color 0.2s;
+}
+.popup-close:hover { color: #000; }
+
+/* Form styling */
+#portfolioForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #083B82;
+}
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #083B82;
+}
+
+/* Submit button with loader */
+.popup-btn {
+  background: #083B82;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.3s;
+  position: relative;
+}
+.popup-btn:hover { background: #062a5c; }
+
+/* Loader (hidden by default) */
+.popup-btn.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+.popup-btn .spinner {
+  display: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup-btn.loading span { visibility: hidden; }
+.popup-btn.loading .spinner { display: block; }
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Success / error message inside popup */
+.success-message, .error-message {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+.success-message strong { color: green; }
+.error-message strong { color: red; }
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+  .popup-content { padding: 20px 15px; }
+  .popup-header h2 { font-size: 16px; }
+  .form-group label { font-size: 13px; }
+  .form-group input, .form-group textarea { font-size: 13px; }
+}
+
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 220px;       /* fixed width */
+  opacity: 1;         /* always visible */
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(79, 70, 229, 0.5);
+}
+
+
+
+/* ----------------------------------- *
+   FOOTER
+* ----------------------------------- */
+
+.footer {
+  background: var(--onyx);
+  color: var(--white-1);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
+  padding: 16px;
+  margin: 16px 12px 24px;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: var(--fs-7);
+  line-height: 1.35;
+  color: var(--white-1);
+}
+
+.footer-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: var(--fs-7);
+  color: var(--white-1);
+  opacity: 0.9;
+  transition: opacity var(--transition-1), transform var(--transition-1);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  opacity: 1;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Light variant if you ever need it on white backgrounds */
+.footer--light {
+  background: #FFFFFF;
+  color: #2b2b2b;
+  border: 1px solid var(--jet);
+}
+.footer--light .footer-links a { color: #2b2b2b; }
+
+/* Sticky option: add class "footer--sticky" to .footer in HTML */
+.footer--sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 8px;           /* small breathing space above device edges */
+  z-index: 100;
+  margin: 0 12px;        /* matches main margins */
+}
+@media (max-width: 768px) {
+  .footer--sticky { bottom: 6px; }
+}
+
+/* Ensure content isn't hidden behind sticky footer */
+body.has-sticky-footer {
+  padding-bottom: 88px; /* ~footer height + spacing; adjust if needed */
+}
+
+/* Narrow screens */
+@media (max-width: 768px) {
+  .footer {
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 100px;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-links { gap: 10px; }
 }

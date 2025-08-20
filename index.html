@@ -35,7 +35,7 @@
 
     gtag('config', 'G-XPJTJKS95N');
   </script>
-  
+
   <!-- Google Site Verification for Google Search Console -->
   <meta name="google-site-verification" content="4cR1XXjVZpxLz77xtjoUaMPykXvOH3F7zmLzWdK9Xb8" />
 
@@ -58,22 +58,27 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Ketan Vyas" width="80">
+          <img src="./assets/images/my-avatar.png" alt="Ketan Vyas" width="110">
         </figure>
 
         <div class="info-content">
           <h1 class="name" title="Ketan Vyas" style="color: #083B82;">Ketan Vyas</h1>
           <div class="sidebar-btn">
-            <button class="title">Company Secretary (F 12064)</button>
-            <button class="title2" id="btn-apointment" onclick="openWhatsApp()">
-              Consult Now &nbsp;
-              <i class="fa fa-whatsapp" style="font-size:26px;color:green"></i>
-            </button>
+            <div class="sidebar-btn">
+              <button class="title">Company Secretary (F 12064)</button>
+              <button class="title" onclick="window.open('Statutory body under an Act of Parliament.pdf')">
+                ICSI PRNO : 6867/2025
+              </button>
+              <button class="title2" id="btn-apointment" onclick="openWhatsApp()">
+                Consult Now &nbsp;
+                <i class="fa fa-whatsapp" style="font-size:26px;color:green"></i>
+              </button>
+            </div>
+
           </div>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
 
@@ -744,8 +749,13 @@
 
           <!-- Filter Buttons -->
           <ul class="filter-list">
-            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-            <li class="filter-item"><button data-filter-btn>Digital Signatures</button></li>
+            <!-- SEARCH BUTTON -->
+            <li class="filter-item">
+              <div class="search-container">
+                <input type="text" id="serviceSearch" class="search-input" placeholder="Search services...">
+              </div>
+            </li>
+            <li class="filter-item"><button class="active" data-filter-btn>Digital Signatures</button></li>
             <li class="filter-item"><button data-filter-btn>Certifications</button></li>
             <li class="filter-item"><button data-filter-btn>Incorporations & Closures</button></li>
             <li class="filter-item"><button data-filter-btn>StartUp & Advisory</button></li>
@@ -760,9 +770,8 @@
             </button>
 
             <ul class="filter-list">
-              <li class="filter-item"><button class="active" data-filter-btn data-filter-value="All">All</button></li>
-              <li class="filter-item"><button data-filter-btn data-filter-value="Digital Signatures">Digital
-                  Signatures</button></li>
+              <li class="filter-item"><button data-filter-btn data-filter-value="Digital Signatures"
+                  class="active">Digital Signatures</button></li>
               <li class="filter-item"><button data-filter-btn data-filter-value="Certifications">Certifications</button>
               </li>
               <li class="filter-item"><button data-filter-btn
@@ -772,198 +781,247 @@
               <li class="filter-item"><button data-filter-btn data-filter-value="Legal Agreements">Legal
                   Agreements</button></li>
             </ul>
-
           </div>
 
           <!-- Project Items -->
           <ul class="project-list">
 
-
             <!-- DIGITAL SIGNATURES -->
             <li class="project-item active" data-filter-item data-category="Digital Signatures">
               <a href="#">
-                <h3 class="project-title">Digital Signature – Individual</h3>
-                <p class="project-category">Issued for Aadhaar-authenticated users with personal or business needs.</p>
+                <h3 class="project-title">DSC – Signing Only (Individual)</h3>
+                <p class="project-category">Capricorn DSC for Aadhaar-authenticated individuals.</p>
               </a>
             </li>
 
             <li class="project-item active" data-filter-item data-category="Digital Signatures">
               <a href="#">
-                <h3 class="project-title">Digital Signature – Corporate</h3>
-                <p class="project-category">For company directors, authorized signatories, or legal representatives.</p>
+                <h3 class="project-title">DSC-Signing & Encry (capricorn) : Indi/ORG.</h3>
+                <p class="project-category">Capricorn DSC with both signing and encryption support.</p>
               </a>
             </li>
 
             <li class="project-item active" data-filter-item data-category="Digital Signatures">
               <a href="#">
-                <h3 class="project-title">Digital Signature – Foreign</h3>
-                <p class="project-category">For NRIs or foreign nationals conducting business in India.</p>
+                <h3 class="project-title">DSC – Signing Only (Foreign)</h3>
+                <p class="project-category">Capricorn DSC for NRIs and foreign nationals (USD based).</p>
               </a>
             </li>
 
             <!-- CERTIFICATIONS -->
-            <li class="project-item active" data-filter-item data-category="Certifications">
+            <li class="project-item" data-filter-item data-category="Certifications">
               <a href="#">
                 <h3 class="project-title">Trademark Registration</h3>
-                <p class="project-category">Protect your brand with legal trademark filing and documentation.</p>
+                <p class="project-category">Trademark applications for MSME and Non-MSME entities.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Certifications">
+            <li class="project-item" data-filter-item data-category="Certifications">
               <a href="#">
                 <h3 class="project-title">GST Registration</h3>
-                <p class="project-category">Register for Goods and Services Tax compliance and filings.</p>
+                <p class="project-category">Goods and Services Tax compliance registration.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Certifications">
+            <li class="project-item" data-filter-item data-category="Certifications">
               <a href="#">
                 <h3 class="project-title">PF Registration</h3>
-                <p class="project-category">Register with Provident Fund for employee benefit schemes.</p>
+                <p class="project-category">Employee Provident Fund registration for organizations.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Certifications">
+            <li class="project-item" data-filter-item data-category="Certifications">
               <a href="#">
                 <h3 class="project-title">ESIC Registration</h3>
-                <p class="project-category">Employee insurance registration under ESI Act.</p>
+                <p class="project-category">Insurance registration under ESI Act for employees.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Certifications">
+            <li class="project-item" data-filter-item data-category="Certifications">
               <a href="#">
                 <h3 class="project-title">IEC Registration</h3>
-                <p class="project-category">Import Export Code for businesses dealing in cross-border trade.</p>
+                <p class="project-category">Import Export Code for businesses engaged in foreign trade.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Certifications">
+            <li class="project-item" data-filter-item data-category="Certifications">
               <a href="#">
                 <h3 class="project-title">MSME Registration</h3>
-                <p class="project-category">Register as Micro, Small, or Medium Enterprise to avail government benefits.
-                </p>
+                <p class="project-category">Register as Micro, Small, or Medium Enterprise.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Certifications">
+            <li class="project-item" data-filter-item data-category="Certifications">
               <a href="#">
                 <h3 class="project-title">LEI Certificate</h3>
-                <p class="project-category">Legal Entity Identifier for financial transactions compliance.</p>
+                <p class="project-category">Legal Entity Identifier for financial transaction compliance.</p>
               </a>
             </li>
 
             <!-- INCORPORATIONS & CLOSURES -->
-            <li class="project-item active" data-filter-item data-category="Incorporations & Closures">
+            <li class="project-item" data-filter-item data-category="Incorporations & Closures">
               <a href="#">
-                <h3 class="project-title">Private Company Incorporation</h3>
-                <p class="project-category">Formation of a private limited company under Companies Act.</p>
+                <h3 class="project-title">Private Limited Formation/ Madhya Pradesh</h3>
+                <p class="project-category">Formation of private limited companies in MP region.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Incorporations & Closures">
+            <li class="project-item" data-filter-item data-category="Incorporations & Closures">
               <a href="#">
-                <h3 class="project-title">Public Company Incorporation</h3>
-                <p class="project-category">Formation of a public limited company and regulatory filings.</p>
+                <h3 class="project-title">Private Limited Formation/ Maharashtra</h3>
+                <p class="project-category">Formation of private limited companies in Maharashtra region.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Incorporations & Closures">
+            <li class="project-item" data-filter-item data-category="Incorporations & Closures">
               <a href="#">
-                <h3 class="project-title">One Person Company (OPC)</h3>
-                <p class="project-category">Single-ownership corporate structure for startups and entrepreneurs.</p>
+                <h3 class="project-title">LLP Formation – Madhya Pradesh</h3>
+                <p class="project-category">Registration of Limited Liability Partnerships in MP.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Incorporations & Closures">
+            <li class="project-item" data-filter-item data-category="Incorporations & Closures">
               <a href="#">
-                <h3 class="project-title">Section 8 Company</h3>
-                <p class="project-category">Non-profit organization registered under Section 8 of the Companies Act.</p>
+                <h3 class="project-title">LLP Formation – Maharashtra</h3>
+                <p class="project-category">Registration of Limited Liability Partnerships in Maharashtra.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Incorporations & Closures">
+            <li class="project-item" data-filter-item data-category="Incorporations & Closures">
               <a href="#">
-                <h3 class="project-title">LLP/Company Strike Off</h3>
-                <p class="project-category">Voluntary closure of LLPs or companies via ROC strike-off.</p>
+                <h3 class="project-title">Striking Off – Company (All States)</h3>
+                <p class="project-category">Closure of private/public companies via ROC strike-off process.</p>
+              </a>
+            </li>
+
+            <li class="project-item" data-filter-item data-category="Incorporations & Closures">
+              <a href="#">
+                <h3 class="project-title">Striking Off – LLP (All States)</h3>
+                <p class="project-category">Closure of LLPs across India via ROC strike-off process.</p>
+              </a>
+            </li>
+
+            <li class="project-item" data-filter-item data-category="Incorporations & Closures">
+              <a href="#">
+                <h3 class="project-title">Mandatory Post incorporation Compliances</h3>
+                <p class="project-category">Essential compliance activities post company incorporation.</p>
               </a>
             </li>
 
             <!-- STARTUP & ADVISORY -->
-            <li class="project-item active" data-filter-item data-category="StartUp & Advisory">
+            <li class="project-item" data-filter-item data-category="StartUp & Advisory">
               <a href="#">
                 <h3 class="project-title">Start-up India Recognition</h3>
-                <p class="project-category">Get certified under the Start-up India initiative to avail government
-                  benefits.</p>
+                <p class="project-category">Official certification under the Start-up India initiative.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="StartUp & Advisory">
+            <li class="project-item" data-filter-item data-category="StartUp & Advisory">
               <a href="#">
                 <h3 class="project-title">DPIIT Certification</h3>
-                <p class="project-category">Department for Promotion of Industry and Internal Trade registration
-                  support.</p>
+                <p class="project-category">Department for Promotion of Industry and Internal Trade registration.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="StartUp & Advisory">
+            <li class="project-item" data-filter-item data-category="StartUp & Advisory">
               <a href="#">
                 <h3 class="project-title">ROC Search Reports</h3>
-                <p class="project-category">Company due diligence and record verification from Registrar of Companies.
-                </p>
+                <p class="project-category">Due diligence and verification of company filings with ROC.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="StartUp & Advisory">
+            <li class="project-item" data-filter-item data-category="StartUp & Advisory">
               <a href="#">
                 <h3 class="project-title">Fundraising Advisory</h3>
-                <p class="project-category">Legal support for funding rounds, investor agreements, and documentation.
-                </p>
+                <p class="project-category">Support for fundraising, investor documentation, and legal agreements.</p>
               </a>
             </li>
 
             <!-- LEGAL AGREEMENTS -->
-            <li class="project-item active" data-filter-item data-category="Legal Agreements">
+            <li class="project-item" data-filter-item data-category="Legal Agreements">
               <a href="#">
                 <h3 class="project-title">Shareholders Agreement (SHA)</h3>
-                <p class="project-category">Drafting of SHA defining shareholder rights and responsibilities.</p>
+                <p class="project-category">Defining shareholder rights, responsibilities, and governance.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Legal Agreements">
+            <li class="project-item" data-filter-item data-category="Legal Agreements">
               <a href="#">
                 <h3 class="project-title">Non-Disclosure Agreement (NDA)</h3>
-                <p class="project-category">Confidentiality agreement to protect sensitive business information.</p>
+                <p class="project-category">Confidentiality agreement to protect sensitive information.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Legal Agreements">
+            <li class="project-item" data-filter-item data-category="Legal Agreements">
               <a href="#">
                 <h3 class="project-title">Memorandum of Understanding (MOU)</h3>
-                <p class="project-category">Preliminary agreement outlining the intent of cooperation between parties.
-                </p>
+                <p class="project-category">Agreement outlining cooperation intent between parties.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Legal Agreements">
+            <li class="project-item" data-filter-item data-category="Legal Agreements">
               <a href="#">
                 <h3 class="project-title">Power of Attorney (POA)</h3>
-                <p class="project-category">Legal authorization for designated individuals to act on your behalf.</p>
+                <p class="project-category">Legal authorization for representatives to act on behalf of entity.</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="Legal Agreements">
+            <li class="project-item" data-filter-item data-category="Legal Agreements">
               <a href="#">
                 <h3 class="project-title">Compulsorily Convertible Debentures (CCDs)</h3>
-                <p class="project-category">Drafting CCD agreements for structured convertible investments.</p>
+                <p class="project-category">Structured convertible debt agreement drafting.</p>
               </a>
             </li>
 
-
           </ul>
+
 
         </section>
 
       </article>
+
+
+      <div id="portfolio-popup" class="popup hidden">
+        <div class="popup-content">
+
+          <div class="popup-header">
+            <h2>Service Inquiry</h2>
+            <button class="popup-close" onclick="closePortfolioPopup()">&times;</button>
+          </div>
+
+          <p id="popup-subtitle">
+            Please fill the form below for <strong id="popup-service"></strong>
+          </p>
+
+          <form id="portfolioForm">
+            <input type="hidden" id="serviceName" name="serviceName">
+
+            <div class="form-group">
+              <label for="userName">Full Name *</label>
+              <input type="text" id="userName" name="userName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="userMobile">Mobile Number *</label>
+              <input type="tel" id="userMobile" name="userMobile" required pattern="^[6-9]\d{9}$"
+                title="Enter valid 10-digit Indian number starting with 6-9">
+            </div>
+
+            <div class="form-group">
+              <label for="userEmail">Email (optional)</label>
+              <input type="email" id="userEmail" name="userEmail">
+            </div>
+
+            <button type="submit" class="popup-btn">
+              <span>Submit</span>
+              <div class="spinner"></div>
+            </button>
+          </form>
+
+          <div id="form-success" class="success-message hidden"></div>
+          <div id="form-error" class="error-message hidden"></div>
+        </div>
+      </div>
 
 
 
@@ -1064,10 +1122,21 @@
 
 
     </div>
-
-
-
+    
+    
   </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text">
+        &copy; 2025 <strong>Ketan Vyas &amp; Co.</strong> — All Rights Reserved.
+      </p>
+      <ul class="footer-links">
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="https://g.co/kgs/SdJZcvy" target="_blank">Reviews</a></li>
+      </ul>
+    </div>
+  </footer>
 
   <!-- Modern Internship Popup -->
   <div id="internship-popup" class="popup modern-popup">
@@ -1147,6 +1216,9 @@
   </div>
 
 
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     emailjs.init('r3LHR_J4o7jYP8m7G'); // Replace with your own EmailJS Public Key
@@ -1211,6 +1283,132 @@
       item.style.transform = 'translateY(30px)';
       item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
       observer.observe(item);
+    });
+  });
+</script>
+
+<script>
+  // Live search filter
+  document.getElementById("serviceSearch").addEventListener("keyup", function () {
+    const searchTerm = this.value.toLowerCase();
+    document.querySelectorAll(".project-item").forEach(item => {
+      const title = item.querySelector(".project-title").textContent.toLowerCase();
+      item.style.display = title.includes(searchTerm) ? "block" : "none";
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init('r3LHR_J4o7jYP8m7G'); // Your EmailJS Public Key
+
+  // Service links mapping
+  const serviceLinks = {
+    // DIGITAL SIGNATURES
+    "DSC – Signing Only (Individual)": "https://rzp.io/rzp/dscsigningonly",
+    "DSC – Signing & Encryption (Individual/Organization)": "https://rzp.io/rzp/dscsignandencry",
+    "DSC – Signing Only (Foreign)": "https://rzp.io/rzp/DSCforeignNational",
+
+    // CERTIFICATIONS
+    "Trademark Registration": "https://rzp.io/rzp/trademarkkvs",
+    "GST Registration": "",
+    "PF Registration": "",
+    "ESIC Registration": "",
+    "IEC Registration": "",
+    "MSME Registration": "",
+    "LEI Certificate": "",
+
+    // INCORPORATIONS & CLOSURES
+    "Private Limited Company – Madhya Pradesh": "https://rzp.io/rzp/PrivateLImtedCoMP",
+    "Private Limited Company – Maharashtra": "https://rzp.io/rzp/PrivateLImtedCoMH",
+    "LLP Formation – Madhya Pradesh": "https://rzp.io/rzp/llpformationMP",
+    "LLP Formation – Maharashtra": "https://rzp.io/rzp/llpformationMH",
+    "Striking Off – Company (All States)": "https://pages.razorpay.com/",
+    "Striking Off – LLP (All States)": "https://pages.razorpay.com/LLPclosure",
+    "Mandatory Post-Incorporation Compliances": "pending",
+
+    // STARTUP & ADVISORY
+    "Start-up India Recognition": "",
+    "DPIIT Certification": "",
+    "ROC Search Reports": "",
+    "Fundraising Advisory": "",
+
+    // LEGAL AGREEMENTS
+    "Shareholders Agreement (SHA)": "",
+    "Non-Disclosure Agreement (NDA)": "",
+    "Memorandum of Understanding (MOU)": "",
+    "Power of Attorney (POA)": "",
+    "Compulsorily Convertible Debentures (CCDs)": ""
+  };
+
+
+
+  // Open Popup when clicking card
+  document.querySelectorAll(".project-item").forEach(item => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const service = this.querySelector(".project-title").innerText;
+
+      // Reset popup state
+      document.getElementById("popup-service").innerText = service;
+      document.getElementById("serviceName").value = service;
+      document.getElementById("portfolioForm").reset();
+      document.getElementById("portfolioForm").style.display = "block";
+      document.getElementById("form-success").classList.add("hidden");
+      document.getElementById("form-error").classList.add("hidden");
+
+      // Show popup
+      document.getElementById("portfolio-popup").classList.remove("hidden");
+    });
+  });
+
+  // Close Popup
+  function closePortfolioPopup() {
+    document.getElementById("portfolio-popup").classList.add("hidden");
+  }
+
+  // Handle Form Submit
+  document.getElementById("portfolioForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const btn = this.querySelector(".popup-btn");
+    btn.classList.add("loading");
+
+    const service = document.getElementById("serviceName").value;
+    const name = document.getElementById("userName").value;
+    const mobile = document.getElementById("userMobile").value;
+    const email = document.getElementById("userEmail").value;
+
+    // Send EmailJS
+    emailjs.send("service_pa4wt3u", "template_kpans14", {
+      service: service,
+      name: name,
+      mobile: mobile,
+      email: email,
+      time: new Date().toLocaleString()
+    }).then(() => {
+      btn.classList.remove("loading");
+      this.style.display = "none";
+
+      const successBox = document.getElementById("form-success");
+      successBox.classList.remove("hidden");
+
+      const link = serviceLinks[service] || "";
+      if (link) {
+        successBox.innerHTML = "<strong>Success!</strong> Redirecting you to details...";
+        setTimeout(() => {
+          window.open(link, "_blank");
+          closePortfolioPopup(); // optional auto-close
+        }, 2000);
+      } else {
+        successBox.innerHTML = `<strong>Thank You!</strong> We will connect with you soon for <em>${service}</em>.`;
+      }
+    }, (err) => {
+      btn.classList.remove("loading");
+      const errorBox = document.getElementById("form-error");
+      errorBox.innerHTML = "<strong>Error:</strong> Something went wrong. Please try again.";
+      errorBox.classList.remove("hidden");
+      console.error(err);
     });
   });
 </script>
