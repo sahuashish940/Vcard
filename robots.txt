@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
+Disallow: /*.log$
+
+# Allow important directories
+Allow: /services/
+Allow: /training/
+Allow: /portfolio/
+Allow: /about/
+Allow: /contact/
+
+# Sitemap location
+Sitemap: https://www.csketanvyas.in/sitemap.xml
+
+# Crawl delay (optional - adjust based on server capacity)
+Crawl-delay: 1
+
+# Additional sitemaps if needed
+# Sitemap: https://www.csketanvyas.in/sitemap-images.xml
+# Sitemap: https://www.csketanvyas.in/sitemap-news.xml
