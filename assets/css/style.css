@@ -300,7 +300,7 @@ main {
   background-color: #FFFFFF;
 }
 
-.sidebar.active { max-height: 550px; }
+.sidebar.active { max-height: 600px; }
 
 .sidebar-info {
   position: relative;
