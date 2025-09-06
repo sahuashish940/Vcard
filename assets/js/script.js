@@ -159,43 +159,17 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
-// Show Internship Popup after 5 seconds
-window.onload = function() {
+
+// Wait for the page to fully load
+window.onload = function () {
+  // Get the popup overlay element
+  const popupOverlay = document.getElementById('popupOverlay');
+
+  // Show the popup overlay by adding the 'show' class
+  popupOverlay.classList.add('show');
+
+  // Set a timeout to hide the popup after 5 seconds
   setTimeout(() => {
-    document.getElementById("internship-popup").style.display = "flex";
-  }, 2000);
+    popupOverlay.classList.remove('show');
+  }, 5000); // Popup disappears after 5 seconds
 };
-
-function closePopup() {
-  document.getElementById("internship-popup").style.display = "none";
-}
-
-
-function showEnrollForm() {
-  document.getElementById("internship-content").classList.add("hidden");
-  document.getElementById("enroll-form").classList.remove("hidden");
-}
-
-document.getElementById('enrollForm').addEventListener('submit', function(event) {
-  event.preventDefault(); 
-
-  const submitBtn = event.target.querySelector('.popup-btn');
-  submitBtn.value = "Submitting...";
-
-  // Use EmailJS to send form data
-  emailjs.sendForm('service_pa4wt3u', 'template_3gpx8gi', '#enrollForm')
-    .then(function() {
-      // Hide form and internship content
-      document.getElementById('enroll-form').classList.add('hidden');
-      document.getElementById('internship-content').classList.add('hidden');
-
-      // Show success message
-      document.getElementById('success-message').classList.remove('hidden');
-
-    }, function(error) {
-      alert('Failed to send! Please try again.');
-      console.error('Error:', error);
-      submitBtn.value = "Submit";
-    });
-});
-
