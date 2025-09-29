@@ -171,5 +171,5 @@ window.onload = function () {
   // Set a timeout to hide the popup after 5 seconds
   setTimeout(() => {
     popupOverlay.classList.remove('show');
-  }, 5000); // Popup disappears after 5 seconds
+  }, 1000); // Popup disappears after 5 seconds
 };

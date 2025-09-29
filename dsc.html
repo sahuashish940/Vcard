@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ketan Vyas - Digital Signature Certificate Services | Company Secretary</title>
+    <meta name="description"
+        content="Get reliable Digital Signature Certificate (DSC) services from Ketan Vyas, certified Company Secretary. Fast, secure, and legally compliant DSC for individuals and businesses.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: #083B82;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.25rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .apply-btn {
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 0;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255, 107, 107, .25);
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+            color: white;
+            text-align: center;
+            padding: 10rem 0 8rem;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .shape1 {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape2 {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape3 {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 740px;
+            margin-inline: auto;
+            opacity: .95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 16px 38px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Sections */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section:nth-child(even) {
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            margin: 1.2rem auto;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3.2rem;
+            max-width: 700px;
+            margin-inline: auto;
+        }
+
+        /* Intro Box */
+        .intro-box {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-radius: 20px;
+            border: 2px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .intro-box p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #333;
+        }
+
+        /* Grids */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2.2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .benefit-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.06) rotate(5deg);
+        }
+
+        .benefit-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 0.6rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2.2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s ease;
+            border-left: 5px solid #667eea;
+            position: relative;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), transparent);
+            border-radius: 0 20px 0 100px;
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-left-color: #ff6b6b;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-card:hover::after {
+            width: 150px;
+            height: 150px;
+        }
+
+        .service-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .service-card ul {
+            list-style: none;
+            color: #555;
+        }
+
+        .service-card li {
+            padding: 0.45rem 0;
+            position: relative;
+            padding-left: 1.4rem;
+        }
+
+        .service-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .step:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            line-height: 56px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .step:hover .step-number {
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        .step h4 {
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .step p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Contact Info strip (kept, form moved to modal) */
+        .contact-info {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 3.0rem;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f1419;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 42px;
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1.1rem;
+            margin: 0 0.4rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transform: translateY(-3px);
+        }
+
+        /* SPA sections (About/Services/How-it-works) */
+        .page-section {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #home {
+            display: block;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* --- Modal --- */
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            z-index: 2000;
+        }
+
+        .modal.open {
+            display: block;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(2px);
+        }
+
+        .modal-dialog {
+            position: relative;
+            max-width: 720px;
+            margin: 6vh auto;
+            padding: 0 16px;
+        }
+
+        .modal-content {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+            padding: 2rem;
+            max-height: 92vh;
+            overflow: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            border: 0;
+            background: transparent;
+            font-size: 2rem;
+            line-height: 1;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .modal-close:hover {
+            color: #111;
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        /* Form (reused inside modal) */
+        .contact-form {
+            max-width: 650px;
+            margin: 0 auto;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.45rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0.6rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero {
+                padding: 8rem 0 6rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .services-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar" aria-label="Primary">
+        <div class="container">
+            <div class="logo">Ketan Vyas</div>
+            <div class="mobile-menu" onclick="toggleMenu()" aria-label="Toggle Menu" role="button">☰</div>
+            <ul id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/catlog">Catlog</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main>
+        <!-- Home -->
+        <div id="home" class="page-section active">
+            <section class="hero">
+                <div class="shape shape1"></div>
+                <div class="shape shape2"></div>
+                <div class="shape shape3"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Secure Your Digital Future with DSC</h1>
+                        <p>Professional Digital Signature Certificate services for businesses and individuals. Fast,
+                            secure, and legally compliant.</p>
+                        <a href="#" onclick="openFormModal()" class="cta-button">Get Started Today</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="intro-box">
+                        <p>
+                            In today's digital world, securing your online transactions is more important than ever.
+                            Digital Signature Certificates (DSC) ensure the integrity and authenticity of electronic
+                            documents, making them legally recognized. At Ketan Vyas, we offer professional DSC services
+                            that are easy to obtain and tailored to your business and personal needs.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Why Choose Us?</h2>
+                    <p class="section-subtitle">Trusted expertise and seamless service for all your digital signature
+                        needs</p>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon" aria-hidden="true">🎓</div>
+                            <h3>Certified Expertise</h3>
+                            <p>Professional Company Secretary with extensive knowledge of digital signature requirements
+                                and legal compliance.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon" aria-hidden="true">⚡</div>
+                            <h3>Fast Processing</h3>
+                            <p>Streamlined application process with quick turnaround times to get your DSC without
+                                delays.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon" aria-hidden="true">⚖️</div>
+                            <h3>Legal Compliance</h3>
+                            <p>Fully compliant with Indian IT Act 2000 and other relevant regulations for complete legal
+                                authenticity.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon" aria-hidden="true">🛡️</div>
+                            <h3>Secure Service</h3>
+                            <p>Dedicated support for personal and corporate DSC with the highest security standards and
+                                data protection.</p>
+                        </div>
+                    </div>
+                    <div style="text-align:center; margin-top: 3rem;">
+                        <a href="#" onclick="openFormModal()" class="cta-button">Start Your Application</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About -->
+        <div id="about" class="page-section">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">About Ketan Vyas</h2>
+                    <p class="section-subtitle">Your trusted partner for Digital Signature Certificate services</p>
+                    <div style="max-width: 900px; margin: 0 auto;">
+                        <div style="text-align: center; margin-bottom: 2.5rem;">
+                            <div style="width: 140px; height: 140px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; margin: 0 auto 1.2rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);"
+                                aria-hidden="true">👨‍💼</div>
+                            <p style="font-size: 1.05rem; line-height: 1.9; color: #555;">
+                                I am Ketan Vyas, a certified Company Secretary with extensive experience helping
+                                individuals and businesses obtain Digital Signature Certificates (DSC). My services
+                                ensure that you can perform secure online transactions, sign important documents, and
+                                comply with legal requirements effortlessly.
+                            </p>
+                        </div>
+
+                        <h3
+                            style="font-size: 1.6rem; color: #1a1a1a; margin-bottom: 1.2rem; text-align: center; font-weight: 700;">
+                            Key Services Offered</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-card">
+                                <div class="benefit-icon" aria-hidden="true">📊</div>
+                                <h3>Tax Filing & Registrations</h3>
+                                <p>DSC for tax filing, government registrations, and official document signing with
+                                    complete legal validity.</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon" aria-hidden="true">🏢</div>
+                                <h3>Business Solutions</h3>
+                                <p>DSC for businesses, contractors, and vendors for legal validity in all commercial
+                                    transactions.</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon" aria-hidden="true">🤝</div>
+                                <h3>Personal Guidance</h3>
+                                <p>Personalized assistance to guide you through the entire DSC process from start to
+                                    finish.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align:center; margin-top: 2rem;">
+                        <a href="#" onclick="openFormModal()" class="cta-button">Contact Now</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Services -->
+        <div id="services" class="page-section">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Our DSC Services</h2>
+                    <p class="section-subtitle">Choose the right Digital Signature Certificate for your needs</p>
+
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <h3>🔐 Class 1 DSC</h3>
+                            <p>Ideal for personal email encryption and secure communication. Perfect for basic digital
+                                signing needs.</p>
+                            <ul>
+                                <li>Email encryption and signing</li>
+                                <li>Basic identity verification</li>
+                                <li>Secure personal communications</li>
+                                <li>Cost-effective solution</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <h3>🏛️ Class 2 DSC</h3>
+                            <p>Perfect for filing taxes, signing company documents, and legal transactions. Most popular
+                                choice.</p>
+                            <ul>
+                                <li>Income tax e-filing</li>
+                                <li>MCA filings and registrations</li>
+                                <li>Bank document signing</li>
+                                <li>Legal document authentication</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-card">
+                            <h3>🏆 Class 3 DSC</h3>
+                            <p>For high-security needs such as e-tendering and e-procurement. Enterprise-grade security.
+                            </p>
+                            <ul>
+                                <li>E-tendering and e-procurement</li>
+                                <li>High-value transactions</li>
+                                <li>Enterprise-level security</li>
+                                <li>Legal and regulatory compliance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="text-align:center; margin-top: 2.4rem;">
+                        <a href="#" onclick="openFormModal()" class="cta-button">Request Your DSC</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- How it works -->
+        <div id="how-it-works" class="page-section">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">How Digital Signature Certificates Work</h2>
+                    <p class="section-subtitle">Simple, secure, and legally recognized digital authentication</p>
+
+                    <div class="intro-box" style="margin-bottom: 2rem;">
+                        <p>
+                            A Digital Signature Certificate (DSC) is an electronic signature that proves the
+                            authenticity of the signer and secures your digital documents. DSCs are issued by Certifying
+                            Authorities (CAs) after verifying the identity of the applicant. They use a unique
+                            encryption key pair – a public key and a private key – to sign and verify documents.
+                        </p>
+                    </div>
+
+                    <h3
+                        style="font-size: 1.6rem; color: #1a1a1a; margin-bottom: 1.2rem; text-align: center; font-weight: 700;">
+                        Simple 4-Step Process</h3>
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h4>Choose DSC Type</h4>
+                            <p>Select Class 1, 2, or 3 based on your specific requirements and usage needs.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h4>Submit Documents</h4>
+                            <p>Provide identity proof, address proof, and photograph for verification process.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h4>Verification</h4>
+                            <p>Receive your DSC after successful verification by the Certifying Authority.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h4>Install & Use</h4>
+                            <p>Install your DSC on a secure USB token or keystore, then e-sign on portals like MCA, GST,
+                                and e-tendering platforms.</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align:center; margin-top: 2.4rem;">
+                        <a href="#" onclick="openFormModal()" class="cta-button">Begin Your Application</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact info strip (no in-page form; modal is used) -->
+        <section class="contact-info" aria-labelledby="reach-us">
+            <div class="container">
+                <h3 id="reach-us" class="section-title" style="color:#fff;">Reach Us</h3>
+                <p class="section-subtitle" style="color:#cfd8dc;">Prefer a quick call or email? We’re happy to help.
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">✉️</span>
+                        <p><strong>Email</strong></p>
+                        <p><a href="mailto:info@csketanvyas.in"
+                                style="color:#fff; text-decoration: underline;">info@csketanvyas.in</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon" aria-hidden="true">📍</span>
+                        <p><strong>Location</strong></p>
+                        <p>Ketan vyas & Co., Company Secretaries,
+                            Mahalaxmi Nagar, Indore, M.P 452010</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Ketan Vyas — Digital Signature Certificate Services</p>
+            <div class="social-links" aria-label="Social Links">
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Twitter / X">X</a>
+                <a href="#" aria-label="Facebook">f</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Modal -->
+    <div id="formModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="formModalTitle"
+        aria-hidden="true">
+        <div class="modal-overlay" onclick="closeFormModal()"></div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close" onclick="closeFormModal()">&times;</button>
+                <h2 id="formModalTitle" class="section-title" style="margin:0 0 .4rem 0; font-size:1.8rem;">Contact &
+                    Apply</h2>
+                <p class="section-subtitle" style="margin-bottom:1.2rem;">Fill out the form and we’ll connect with you.
+                </p>
+
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dscType">DSC Type</label>
+                        <select id="dscType" name="dscType" required>
+                            <option value="">Select</option>
+                            <option>Class 1 (Personal)</option>
+                            <option>Class 2 (Tax/MCA/Banking)</option>
+                            <option>Class 3 (E-Tendering/Enterprise)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message"
+                            placeholder="Share your use case or any questions..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sticky nav shadow
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
+
+        // Modal logic with focus trap
+        let lastFocusedEl = null;
+
+        function getFocusable(container) {
+            return container.querySelectorAll(
+                'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+            );
+        }
+
+        function openFormModal() {
+            const modal = document.getElementById('formModal');
+            lastFocusedEl = document.activeElement;
+
+            modal.classList.add('open');
+            modal.removeAttribute('aria-hidden');
+            document.body.classList.add('modal-open');
+
+            // focus first field
+            const nameInput = modal.querySelector('#name');
+            const focusables = getFocusable(modal);
+            (nameInput || focusables[0])?.focus();
+
+            function trap(e) {
+                if (e.key === 'Tab') {
+                    const items = Array.from(getFocusable(modal));
+                    if (!items.length) return;
+                    const firstEl = items[0];
+                    const lastEl = items[items.length - 1];
+                    if (e.shiftKey && document.activeElement === firstEl) { e.preventDefault(); lastEl.focus(); }
+                    else if (!e.shiftKey && document.activeElement === lastEl) { e.preventDefault(); firstEl.focus(); }
+                }
+                if (e.key === 'Escape') closeFormModal();
+            }
+            modal._trapHandler = trap;
+            modal.addEventListener('keydown', trap);
+        }
+
+        function closeFormModal() {
+            const modal = document.getElementById('formModal');
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+            modal.removeEventListener('keydown', modal._trapHandler);
+            if (lastFocusedEl) lastFocusedEl.focus();
+        }
+
+        // Handle contact form submit (frontend only)
+        function handleSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = {
+                name: form.name.value.trim(),
+                email: form.email.value.trim(),
+                phone: form.phone.value.trim(),
+                dscType: form.dscType.value,
+                message: form.message.value.trim()
+            };
+
+            if (!data.name || !data.email || !data.phone || !data.dscType) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            alert('Thank you! Your application has been submitted. We will contact you shortly.');
+            form.reset();
+            closeFormModal();
+        }
+
+        // Current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+        (function markActiveNav() {
+            const path = (location.pathname.replace(/\/+$/, '') || '/').toLowerCase();
+            document.querySelectorAll('#nav-menu a').forEach(a => {
+                const href = (a.getAttribute('href').replace(/\/+$/, '') || '/').toLowerCase();
+                if (href === path) a.classList.add('active');
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

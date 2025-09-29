@@ -281,7 +281,8 @@
               <button class="title" onclick="window.open('Statutory body under an Act of Parliament.pdf')">
                 ICSI PRNO : 6867/2025
               </button>
-              <button style="background-color: #DCF8C6; color: green; font-size: small;" class="title2" id="btn-apointment" onclick="openWhatsApp()">
+              <button style="background-color: #DCF8C6; color: green; font-size: small;" class="title2"
+                id="btn-apointment" onclick="openWhatsApp()">
                 Consult Now &nbsp;
                 <i class="fa fa-whatsapp" style="font-size:26px;color:green"></i>
               </button>
@@ -1480,14 +1481,18 @@
 <script>
   emailjs.init('r3LHR_J4o7jYP8m7G'); // Your EmailJS Public Key
 
-  // Service links mapping
+  // ✅ Services that should go straight to /dsc
+  const dscServices = new Set([
+    "DSC – Signing Only (Individual)",
+    "DSC – Signing & Encryption (Individual/Organization)",
+    "DSC – Signing Only (Foreign)"
+  ]);
+
+  // Service links mapping (keep as-is if you still use it after form submit)
   const serviceLinks = {
-    // DIGITAL SIGNATURES
     "DSC – Signing Only (Individual)": "https://rzp.io/rzp/dscsigningonly",
     "DSC – Signing & Encryption (Individual/Organization)": "https://rzp.io/rzp/dscsignandencry",
     "DSC – Signing Only (Foreign)": "https://rzp.io/rzp/DSCforeignNational",
-
-    // CERTIFICATIONS
     "Trademark Registration": "https://rzp.io/rzp/trademarkkvs",
     "GST Registration": "",
     "PF Registration": "",
@@ -1495,8 +1500,6 @@
     "IEC Registration": "",
     "MSME Registration": "",
     "LEI Certificate": "",
-
-    // INCORPORATIONS & CLOSURES
     "Private Limited Company – Madhya Pradesh": "https://rzp.io/rzp/PrivateLImtedCoMP",
     "Private Limited Company – Maharashtra": "https://rzp.io/rzp/PrivateLImtedCoMH",
     "LLP Formation – Madhya Pradesh": "https://rzp.io/rzp/llpformationMP",
@@ -1504,14 +1507,10 @@
     "Striking Off – Company (All States)": "https://pages.razorpay.com/",
     "Striking Off – LLP (All States)": "https://pages.razorpay.com/LLPclosure",
     "Mandatory Post-Incorporation Compliances": "pending",
-
-    // STARTUP & ADVISORY
     "Start-up India Recognition": "",
     "DPIIT Certification": "",
     "ROC Search Reports": "",
     "Fundraising Advisory": "",
-
-    // LEGAL AGREEMENTS
     "Shareholders Agreement (SHA)": "",
     "Non-Disclosure Agreement (NDA)": "",
     "Memorandum of Understanding (MOU)": "",
@@ -1519,23 +1518,25 @@
     "Compulsorily Convertible Debentures (CCDs)": ""
   };
 
-
-
-  // Open Popup when clicking card
+  // Open Popup when clicking card (or go to /dsc for the 3 DSC services)
   document.querySelectorAll(".project-item").forEach(item => {
     item.addEventListener("click", function (e) {
       e.preventDefault();
-      const service = this.querySelector(".project-title").innerText;
+      const service = this.querySelector(".project-title").innerText.trim();
 
-      // Reset popup state
+      // 👉 If service is one of the three DSC ones, go directly to /dsc
+      if (dscServices.has(service)) {
+        window.location.href = `${location.origin}/dsc`; // same-tab, site-root + /dsc
+        return;
+      }
+
+      // Otherwise show the lead form popup
       document.getElementById("popup-service").innerText = service;
       document.getElementById("serviceName").value = service;
       document.getElementById("portfolioForm").reset();
       document.getElementById("portfolioForm").style.display = "block";
       document.getElementById("form-success").classList.add("hidden");
       document.getElementById("form-error").classList.add("hidden");
-
-      // Show popup
       document.getElementById("portfolio-popup").classList.remove("hidden");
     });
   });
@@ -1545,7 +1546,7 @@
     document.getElementById("portfolio-popup").classList.add("hidden");
   }
 
-  // Handle Form Submit
+  // Handle Form Submit (unchanged)
   document.getElementById("portfolioForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -1557,13 +1558,8 @@
     const mobile = document.getElementById("userMobile").value;
     const email = document.getElementById("userEmail").value;
 
-    // Send EmailJS
     emailjs.send("service_pa4wt3u", "template_kpans14", {
-      service: service,
-      name: name,
-      mobile: mobile,
-      email: email,
-      time: new Date().toLocaleString()
+      service, name, mobile, email, time: new Date().toLocaleString()
     }).then(() => {
       btn.classList.remove("loading");
       this.style.display = "none";
@@ -1576,8 +1572,8 @@
         successBox.innerHTML = "<strong>Success!</strong> Redirecting you to details...";
         setTimeout(() => {
           window.open(link, "_blank");
-          closePortfolioPopup(); // optional auto-close
-        }, 2000);
+          closePortfolioPopup();
+        }, 1000);
       } else {
         successBox.innerHTML = `<strong>Thank You!</strong> We will connect with you soon for <em>${service}</em>.`;
       }
